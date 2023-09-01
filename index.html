@@ -3,9 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PH-YouTube</title>
+    <title>PH-Tube</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    
+<body class="max-w-screen-xl px-10 mx-auto">
+
+    <!-- Header -->
+    <header>
+        <div id="navbar" class="flex justify-between items-center mt-2 py-8 border-b-2 border-b-gray-200">
+            <img src="img/Logo.png" alt="Logo">
+            <button class="bg-slate-300 py-2 px-5 rounded-md mr-24">
+                Sort by view
+            </button>
+            <button class="text-white bg-[#FF1F3D] py-2 px-5 rounded-md">
+                Blog
+            </button>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="mx-auto">
+        <!-- Menu -->
+        <div id="menu" class="pt-8 pb-10 flex justify-center items-center gap-5">
+            <button class="text-black px-5 py-2 bg-slate-400 rounded-md">
+                All
+            </button>
+            <button class="text-black px-5 py-2 bg-slate-400 rounded-md">
+                All
+            </button>
+            <button class="text-black px-5 py-2 bg-slate-400 rounded-md">
+                All
+            </button>
+            <button class="text-black px-5 py-2 bg-slate-400 rounded-md">
+                All
+            </button>
+        </div>
+
+        <!-- Videos -->
+        <div id="videosContainer" class="grid grid-cols-4 gap-x-4">
+            <div id="videosCard" class="max-w-80">
+                <img src="img/d72ed80d0c125cb4d7fdda46f2bb42c0.jpg" alt="">
+                <div id="details" class="mt-4 flex gap-4">
+                    <div id="pp">
+                        <img src="img/f7c8a8ca2f16c4cbfd746902cb0f8d57.jpg" alt="" class="w-10 rounded-full">
+                    </div>
+
+                    <div id="videoDetails" class="flex flex-col gap-2">
+                        <p id="videoTitle" class="font-bold">
+                            Building a Winning UX Strategy Using the Kano Model
+                        </p>
+                        <p id="cName" class="text-sm">
+                            Awlad Hossain <span><img src="" alt=""></span>
+                        </p>
+                        <p id="views" class="text-sm">91K Views</p>
+                    </div>
+                </div>
+            </div>
+            <div id="videosCard" class="max-w-80">
+                <img src="img/d72ed80d0c125cb4d7fdda46f2bb42c0.jpg" alt="">
+                <div id="details" class="mt-4 flex gap-4">
+                    <div id="pp">
+                        <img src="img/f7c8a8ca2f16c4cbfd746902cb0f8d57.jpg" alt="" class="w-10 rounded-full">
+                    </div>
+
+                    <div id="videoDetails" class="flex flex-col gap-2">
+                        <p id="videoTitle" class="font-bold">
+                            Building a Winning UX Strategy Using the Kano Model
+                        </p>
+                        <p id="cName" class="text-sm">
+                            Awlad Hossain <span><img src="" alt=""></span>
+                        </p>
+                        <p id="views" class="text-sm">91K Views</p>
+                    </div>
+                </div>
+            </div>
+            <div id="videosCard" class="max-w-80">
+                <img src="img/d72ed80d0c125cb4d7fdda46f2bb42c0.jpg" alt="">
+                <div id="details" class="mt-4 flex gap-4">
+                    <div id="pp">
+                        <img src="img/f7c8a8ca2f16c4cbfd746902cb0f8d57.jpg" alt="" class="w-10 rounded-full">
+                    </div>
+
+                    <div id="videoDetails" class="flex flex-col gap-2">
+                        <p id="videoTitle" class="font-bold">
+                            Building a Winning UX Strategy Using the Kano Model
+                        </p>
+                        <p id="cName" class="text-sm">
+                            Awlad Hossain <span><img src="" alt=""></span>
+                        </p>
+                        <p id="views" class="text-sm">91K Views</p>
+                    </div>
+                </div>
+            </div>
+            <div id="videosCard" class="max-w-80">
+                <img src="img/d72ed80d0c125cb4d7fdda46f2bb42c0.jpg" alt="">
+                <div id="details" class="mt-4 flex gap-4">
+                    <div id="pp">
+                        <img src="img/f7c8a8ca2f16c4cbfd746902cb0f8d57.jpg" alt="" class="w-10 rounded-full">
+                    </div>
+
+                    <div id="videoDetails" class="flex flex-col gap-2">
+                        <p id="videoTitle" class="font-bold">
+                            Building a Winning UX Strategy Using the Kano Model
+                        </p>
+                        <p id="cName" class="text-sm">
+                            Awlad Hossain <span><img src="" alt=""></span>
+                        </p>
+                        <p id="views" class="text-sm">91K Views</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
