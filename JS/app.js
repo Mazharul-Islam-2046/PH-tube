@@ -1,15 +1,15 @@
 // Menu API Data Fetch
-const menu = async () => {
+const menu = async (isFirstLoad) => {
 	const res = await fetch(
 		"https://openapi.programming-hero.com/api/videos/categories"
 	);
 	const data = await res.json();
 	const categories = data.data;
-	showCategories(categories);
+	showCategories(categories, isFirstLoad);
 };
 
 // showCategories Function
-const showCategories = (categories) => {
+const showCategories = (categories, isFirstLoad) => {
 	// Getting the menu Container
 	const menuContainer = document.getElementById("menu");
 
@@ -23,14 +23,32 @@ const showCategories = (categories) => {
 
 		// Inner HTML
 		menuDiv.innerHTML = `
-        <button onclick = "videos(${categoriesID})" class="${categoriesName} text-black px-5 py-2 bg-slate-400 rounded-md">
+        <button onclick = "videos(${categoriesID}) ; redBtn(this)" class="btn text-black px-5 py-2 bg-slate-400 rounded-md">
         ${categoriesName}
         </button>`;
 
 		// Append
 		menuContainer.appendChild(menuDiv);
 	});
+
+	if (isFirstLoad) {
+		const btn = document.querySelector(".btn");
+		btn.classList.replace("bg-slate-400", "bg-[#FF1F3D]");
+		btn.classList.replace("text-black", "text-white");
+	}
 };
+
+
+// Red Btn categories
+const redBtn = (target) =>{
+	const btnList = document.querySelectorAll(".btn");
+	for (const btn of btnList) {
+		btn.classList.replace("bg-[#FF1F3D]", "bg-slate-400");
+		btn.classList.replace("text-white", "text-black");
+	}
+	target.classList.replace("bg-slate-400", "bg-[#FF1F3D]");
+	target.classList.replace("text-black", "text-white");
+}
 
 // Videos API Data Fetch
 const videos = async (categoriesID) => {
@@ -82,7 +100,9 @@ const showData = (data, haveData) => {
         </div>`;
 			} else {
 				div.innerHTML = `<div id="videosCard" class="max-w-80">
-            <img src="${thumbnail}" alt="" class="h-[13vw] max-h-[176px] w-full rounded-md">
+            <div>
+			<img src="${thumbnail}" alt="" class="h-[13vw] max-h-[176px] w-full rounded-md">
+			</div>
             <div id="details" class="mt-4 flex gap-4">
                 <div id="pp">
                     <img src="${authorspp}" alt="" class="w-10 h-10 rounded-full">
@@ -118,5 +138,5 @@ const showData = (data, haveData) => {
 	}
 };
 
-menu();
+menu(true);
 videos(1000);
