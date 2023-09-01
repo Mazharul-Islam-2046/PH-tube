@@ -81,7 +81,11 @@ const showData = (data, haveData) => {
 			const div = document.createElement("div");
 			if (isVarified === true) {
 				div.innerHTML = `<div id="videosCard" class="max-w-80">
-            <img src="${thumbnail}" alt="" class="h-[13vw] max-h-[176px] w-full rounded-md">
+            <div class = "position: relative">
+			<img src="${thumbnail}" alt="" class="h-[13vw] max-h-[176px] w-full rounded-md">
+			<p id = "${postedDate}" class = "position: absolute bottom-4 right-4 bg-black text-white">
+			</p>
+			</div>
             <div id="details" class="mt-4 flex gap-4">
                 <div id="pp">
                     <img src="${authorspp}" alt="" class="w-10 h-10 rounded-full">
@@ -100,8 +104,10 @@ const showData = (data, haveData) => {
         </div>`;
 			} else {
 				div.innerHTML = `<div id="videosCard" class="max-w-80">
-            <div>
+            <div class = "position: relative">
 			<img src="${thumbnail}" alt="" class="h-[13vw] max-h-[176px] w-full rounded-md">
+			<p id = "${postedDate}" class = "position: absolute bottom-3 right-2 bg-black text-white px-2 py-1 text-sm">
+			</p>
 			</div>
             <div id="details" class="mt-4 flex gap-4">
                 <div id="pp">
@@ -124,6 +130,23 @@ const showData = (data, haveData) => {
 			// Append Data
 			videosContainer.classList.add("grid")
 			videosContainer.appendChild(div);
+
+			// logic for posted date
+			if (postedDate.length > 0) {
+				const days = Math.floor(postedDate/86400);
+				const hours = Math.floor((postedDate%86400)/3600);
+				const mins = Math.floor(((postedDate%86400)%3600) / 60);
+				const postedDateString = `${postedDate}`
+				const postedDateContainer = document.getElementById(postedDateString);
+				if (days >= 30) {
+					postedDateContainer.innerText = `Long ago`;
+				}
+				else if (days > 0 && days < 30) {
+					postedDateContainer.innerText = `${days} days ago`;
+				}else{
+					postedDateContainer.innerText = `${hours}hrs ${mins}min ago`;
+				}
+			}
 		});
 	} else {
 		videosContainer.classList.remove("grid")
