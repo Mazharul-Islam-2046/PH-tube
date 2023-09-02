@@ -23,7 +23,7 @@ const showCategories = (categories, isFirstLoad) => {
 
 		// Inner HTML
 		menuDiv.innerHTML = `
-        <button onclick = "videos(${categoriesID}) ; redBtn(this)" class="btn text-black px-5 py-2 bg-slate-400 rounded-md">
+        <button onclick = "videos(${categoriesID}) ; redBtn(this)" class="btn text-sm md:text-sm lg:text-base text-black px-3 py-1 md:px-4 md:py-2 lg:px-5 lg:py-2 bg-slate-400 rounded-md">
         ${categoriesName}
         </button>`;
 
