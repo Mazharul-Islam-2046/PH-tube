@@ -8,13 +8,13 @@
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="max-w-screen-xl px-10 mx-auto">
+<body class="max-w-screen-xl px-10 pb-10 mx-auto">
 
     <!-- Header -->
     <header>
-        <div id="navbar" class="flex justify-between items-center mt-2 py-8 border-b-2 border-b-gray-200">
+        <div id="navbar" class="flex flex-col gap-y-6 justify-between items-center mt-2 py-8 border-b-2 border-b-gray-200 md:flex-row  lg:flex-row">
             <img src="img/Logo.png" alt="Logo">
-            <button class="bg-slate-300 py-2 px-5 rounded-md mr-24">
+            <button onclick="sortFunction()" id="sortBtn" class=" text-black bg-slate-300 py-2 px-5 rounded-md md:-ml-28 lg:-ml-32">
                 Sort by view
             </button>
             <button class="text-white bg-[#FF1F3D] py-2 px-5 rounded-md">
@@ -31,7 +31,7 @@
         </div>
 
         <!-- Videos -->
-        <div id="videosContainer" class="grid-cols-4 gap-x-4 gap-y-10">
+        <div id="videosContainer" class="grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-10">
         </div>
     </main>
 
