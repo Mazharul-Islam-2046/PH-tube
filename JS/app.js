@@ -206,5 +206,12 @@ const sortFunction = () => {
 	videos(categoriesID, true);
 };
 
+
+// onBlogPage Function
+const onBlogPage = () => {location.href = 'blog.html'};
+
+// backToHome Function
+const backToHome = () => {location.href = 'index.html'};
+
 menu(true);
 videos(1000);

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Blog</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body
+		class="min-h-screen flex flex-col justify-center items-center max-w-screen-xl"
+	>
+		<div class="bg-orange-400 w-3/4 py-16 px-5 md:px-24 lg:px-24">
+			<h1 class="text-center text-3xl md:text-4xl lg:text-4xl text-zinc-50 mb-12 font-bold">Scope Of Var, Let and Const</h1>
+			<div class="bg-orange-200 py-3 px-6 mb-8">
+				<h2 class="text-xl md:text-2xl lg:text-2xl text-slate-600 font-bold">1. Scope of Var</h2>
+				<p class="text-base md:text-xl lg:text-xl text-gray-800 font-medium">
+					=>Var is Function scoped, has hoisting ability and has no block scope.
+				</p>
+			</div>
+			<div class="bg-orange-200 py-3 px-6 mb-8">
+				<h1 class="text-xl md:text-2xl lg:text-2xl text-slate-600 font-bold">2. Scope Of Let</h1>
+				<p class="text-base md:text-xl lg:text-xl text-gray-800 font-medium">=> Let has hoisting ability and also block scoped.</p>
+			</div>
+			<div class="bg-orange-200 py-3 px-6 mb-8">
+				<h1 class="text-xl md:text-2xl lg:text-2xl text-slate-600 font-bold">3. Scope Of Const</h1>
+				<p class="text-base md:text-xl lg:text-xl text-gray-800 font-medium">=> Const has no hoisting ability But block scoped.</p>
+			</div>
+            <button onclick="backToHome()" class="px-4 py-2 text-sm bg-slate-700 text-zinc-200 hover:bg-white hover:text-slate-700">Back To Home Page =></button>
+		</div>
+
+        <script src="JS/app.js"></script>
+	</body>
+</html>
